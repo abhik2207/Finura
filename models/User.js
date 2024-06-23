@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
     cart: { type: Array, default: [] },
     isAdmin: { type: Boolean },
     orders: { type: Array, default: [] },
-    profilePhoto: { type: String }
+    profilePicture: { type: String }
 });
 
 const UserModel = mongoose.model('User', userSchema);

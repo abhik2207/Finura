@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const ownerSchema = mongoose.Schema({
-    name: { type: String },
-    email: { type: String },
-    contact: { type: Number },
-    password: { type: String },
+    name: { type: String, required: [true, "Please provide a name"] },
+    email: { type: String, required: [true, "Please provide a email id"] },
+    contact: { type: Number, required: [true, "Please provide a contact number"] },
+    password: { type: String, required: [true, "Please provide a password"] },
     products: { type: Array, default: [] },
-    profilePhoto: { type: String },
+    profilePicture: { type: String },
     gstNumber: { type: String }
 });
 

@@ -2,7 +2,7 @@ const express = require('express');
 const chalk = require('chalk');
 const cookieParser = require('cookie-parser');
 const path = require('path');
-require('dotenv').config()
+require('dotenv').config();
 
 const dbConnection = require('./config/dbConnect');
 
@@ -29,4 +29,5 @@ app.use("/products", productsRouter);
 
 app.listen(process.env.PORT, () => {
     console.log(chalk.hex('#ffd000').underline.bold(`--- SERVER RUNNING AT PORT ${process.env.PORT} ---`));
+    console.log(chalk.hex('#00ff00').underline.bold(`--- ${process.env.NODE_ENV} mode ---`));
 });
