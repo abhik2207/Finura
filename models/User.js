@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
     email: { type: String, required: [true, "Please provide a email address"] },
     contact: { type: Number, required: [true, "Please provide a contact number"] },
     password: { type: String, required: [true, "Please provide a password"] },
-    cart: { type: Array, default: [] },
+    cart: [{ type: mongoose.Schema.Types.ObjectId, ref :"Product", default: [] }],
     orders: { type: Array, default: [] },
     profilePicture: { type: String }
 });
